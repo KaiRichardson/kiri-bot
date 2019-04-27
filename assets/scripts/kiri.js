@@ -11,6 +11,9 @@ var spotify = new Spotify(keys.spotify);
 var control = process.argv[2];
 var quest = process.argv[3];
 
+// gen var
+var curentTab = "movie";
+
 // concert-this
 function concertSearch(artist) {
     var concertDate = 0;
@@ -53,12 +56,12 @@ function concertSearch(artist) {
 
 // spotify-this-song
 function spotifySearch(song) {
+    var logUp = [];
+
     // If the user doesn't type a artist in, the program will prompt user for a name'
     if (song === undefined) {
         song = "The Sign";
     };
-
-    var logUp = [];
 
     // This will show the following information about the song in your terminal/bash window
     spotify.search({ type: 'track', query: song, limit: "5" })
@@ -98,38 +101,17 @@ function spotifySearch(song) {
 // movie-this
 function omdbSearch(movieName) {
     var logUp = [];
+
     // If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
     if (movieName === undefined) {
         movieName = "Mr. Nobody";
     };
+
     // This will output the following information to your terminal/bash window:
-    axios.get("http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy")
+    axios.get("http://www.omdbapi.com/?t=" + movieName + "&y=&plot=full&apikey=trilogy")
         .then(function (response) {
-            // console.log(response.data);
-            console.log("Movie Title: " + response.data.Title);
-            logUp.push("\n" + "Movie Title: " + response.data.Title);
-
-            console.log("Movie Released: " + response.data.Released);
-            logUp.push("\n" + "Movie Released: " + response.data.Released);
-
-            console.log("Movie IMDB Ratings: " + response.data.Ratings[0].Value);
-            logUp.push("\n" + "Movie IMDB Ratings: " + response.data.Ratings[0].Value);
-
-            console.log("Movie Rotten Tomatoes Ratings: " + response.data.Ratings[1].Value);
-            logUp.push("\n" + "Movie Rotten Tomatoes Ratings: " + response.data.Ratings[1].Value);
-
-            console.log("Movie Country: " + response.data.Country);
-            logUp.push("\n" + "Movie Country: " + response.data.Country);
-
-            console.log("Movie Language: " + response.data.Language);
-            logUp.push("\n" + "Movie Language: " + response.data.Language);
-
-            console.log("Movie Plot: " + response.data.Plot);
-            logUp.push("\n" + "Movie Plot: " + response.data.Plot);
-
-            console.log("Movie Actors: " + response.data.Actors);
-            logUp.push("\n" + "Movie Actors: " + response.data.Actors);
-            logIt(logUp);
+            console.log(response.data);
+            console.log(response.data.Poster);
         });
 };
 
@@ -172,7 +154,7 @@ function doWhat() {
                     concertSearch(quer);
                 }
     });
-}
+};
 
 // BONUS
 // In addition to logging the data to your terminal/bash window, output the data to a .txt file called log.txt.
@@ -190,4 +172,4 @@ function logIt(text) {
         console.log("log.txt was updated!");
 
     });
-}
+};
