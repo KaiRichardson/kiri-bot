@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin="" />
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Entertainment Hub</title>
+</head>
+
+<body>
+    <!-- SEARCH BAR -->
+    <div id="section_1">
+        <div id="splash_div">
+            <div id="btn_div">
+                <button class="top_btn" id="movie_btn">Movies</button>
+                <button class="top_btn" id="band_btn">Bands</button>
+            </div>
+            <div id="search_bar">
+                <span id="empty_from"></span>
+                <br>
+                <form action="#" id="name_search">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" placeholder="Speed..." id="text_input">
+                </form>
+                <button id="text_submit">Submit</button>
+            </div>
+            <div class="row" id="movie_div">
+                <div class="col-4" id="pic_cast">
+                    <div class="row">
+                        <div class="col-12" id="pics">
+                            <h1>pics</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12" id="cast">
+                            <h1>cast</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4" id="movie_info">
+                    <h1>info</h1>
+                </div>
+                <div class="col-4" id="movie_spotify">
+                    <h1>spotify</h1>
+                </div>
+            </div>
+            <div class="row" id="band_div">
+                <div class="col-4" id="band_shows">
+                    <h1>shows</h1>
+                </div>
+                <div class="col-4" id="band_info">
+                    <h1>info</h1>
+                </div>
+                <div class="col-4" id="band_spotify">
+                    <h1>spotify</h1>
+                </div>
+            </div>
+            <div id="end_cap"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div id="foot_text">
+            <p>Copyright @</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""></script>
+    <script type="text/javascript" src="../backend/kiri.js"></script>
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+</body>
+
+</html>

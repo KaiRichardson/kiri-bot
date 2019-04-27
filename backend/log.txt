@@ -86,3 +86,13 @@ Venue Location: Dallas, TX, United States,
 Concert Date: May 11, 2019 7:00 PM,
 ,
 *********************************************************************
+
+Movie Title: Speed,
+Movie Released: 10 Jun 1994,
+Movie IMDB Ratings: 7.2/10,
+Movie Rotten Tomatoes Ratings: 93%,
+Movie Country: USA,
+Movie Language: English,
+Movie Plot: A young police officer must prevent a bomb exploding aboard a city bus by keeping its speed above 50 mph.,
+Movie Actors: Keanu Reeves, Dennis Hopper, Sandra Bullock, Joe Morton,
+*********************************************************************
